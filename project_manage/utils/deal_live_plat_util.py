@@ -13,7 +13,7 @@ import config as config
 import logging
 import logging.config
 
-__author__ = 'hua.xiao'
+__author__ = 'Monkey.D.xiao'
 
 
 class PlatUtil(object):
