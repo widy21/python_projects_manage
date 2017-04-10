@@ -1,0 +1,116 @@
+Fri, 07 Apr 2017 16:05:28 deal_live_plat_util.py[line:34] DEBUG ========deal_live============
+Fri, 07 Apr 2017 16:05:36 deal_live_plat_util.py[line:102] DEBUG begin to download live_war...
+Fri, 07 Apr 2017 16:05:36 deal_live_plat_util.py[line:107] DEBUG relative_url-->/com/ledo/live/sdk/ledo-live-web/0.0.1-SNAPSHOT/ledo-live-web-0.0.1-20170405.113421-4.war
+Fri, 07 Apr 2017 16:05:36 deal_live_plat_util.py[line:109] DEBUG download_live_url-->http://10.237.181.73:8081/nexus/service/local/repositories/snapshots/content/com/ledo/live/sdk/ledo-live-web/0.0.1-SNAPSHOT/ledo-live-web-0.0.1-20170405.113421-4.war
+Fri, 07 Apr 2017 16:05:40 deal_live_plat_util.py[line:114] DEBUG download success...
+Fri, 07 Apr 2017 16:05:56 deal_live_plat_util.py[line:47] DEBUG rename success. 
+Fri, 07 Apr 2017 16:05:57 transport.py[line:1430] DEBUG starting thread (client mode): 0x49029d0L
+Fri, 07 Apr 2017 16:05:57 transport.py[line:1430] INFO Connected (version 2.0, client OpenSSH_5.3)
+Fri, 07 Apr 2017 16:05:57 transport.py[line:1430] DEBUG kex algos:[u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ssh-dss'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+Fri, 07 Apr 2017 16:05:57 transport.py[line:1430] DEBUG Ciphers agreed: local=aes128-ctr, remote=aes128-ctr
+Fri, 07 Apr 2017 16:05:57 transport.py[line:1430] DEBUG using kex diffie-hellman-group14-sha1; server key type ssh-rsa; cipher: local aes128-ctr, remote aes128-ctr; mac: local hmac-sha1, remote hmac-sha1; compression: local none, remote none
+Fri, 07 Apr 2017 16:05:57 transport.py[line:1430] DEBUG Switch to new keys ...
+Fri, 07 Apr 2017 16:05:57 transport.py[line:1430] DEBUG Attempting password auth...
+Fri, 07 Apr 2017 16:05:57 transport.py[line:1430] DEBUG userauth is OK
+Fri, 07 Apr 2017 16:05:57 transport.py[line:1430] INFO Authentication (password) successful!
+Fri, 07 Apr 2017 16:05:57 channel.py[line:1072] DEBUG [chan 0] Max packet in: 32768 bytes
+Fri, 07 Apr 2017 16:05:57 channel.py[line:1072] DEBUG [chan 0] Max packet out: 32768 bytes
+Fri, 07 Apr 2017 16:05:57 transport.py[line:1430] DEBUG Secsh channel 0 opened.
+Fri, 07 Apr 2017 16:05:57 channel.py[line:1072] DEBUG [chan 0] Sesch channel 0 request ok
+Fri, 07 Apr 2017 16:05:58 sftp.py[line:129] INFO [chan 0] Opened sftp connection (server version 3)
+Fri, 07 Apr 2017 16:05:58 sftp.py[line:129] DEBUG [chan 0] open('/export/sdk/hx/ledo_live/ledo-live.war', 'wb')
+Fri, 07 Apr 2017 16:05:58 sftp.py[line:129] DEBUG [chan 0] open('/export/sdk/hx/ledo_live/ledo-live.war', 'wb') -> 00000000
+Fri, 07 Apr 2017 16:06:00 sftp.py[line:129] DEBUG [chan 0] close(00000000)
+Fri, 07 Apr 2017 16:06:00 sftp.py[line:129] DEBUG [chan 0] stat('/export/sdk/hx/ledo_live/ledo-live.war')
+Fri, 07 Apr 2017 16:06:00 transport.py[line:1430] DEBUG EOF in transport thread
+Fri, 07 Apr 2017 16:06:00 deal_live_plat_util.py[line:51] DEBUG upload war file success .
+Fri, 07 Apr 2017 16:06:00 transport.py[line:1430] DEBUG starting thread (client mode): 0x7558450L
+Fri, 07 Apr 2017 16:06:00 transport.py[line:1430] INFO Connected (version 2.0, client OpenSSH_5.3)
+Fri, 07 Apr 2017 16:06:00 transport.py[line:1430] DEBUG kex algos:[u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ssh-dss'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+Fri, 07 Apr 2017 16:06:00 transport.py[line:1430] DEBUG Ciphers agreed: local=aes128-ctr, remote=aes128-ctr
+Fri, 07 Apr 2017 16:06:00 transport.py[line:1430] DEBUG using kex diffie-hellman-group14-sha1; server key type ssh-rsa; cipher: local aes128-ctr, remote aes128-ctr; mac: local hmac-sha1, remote hmac-sha1; compression: local none, remote none
+Fri, 07 Apr 2017 16:06:00 transport.py[line:1430] DEBUG Switch to new keys ...
+Fri, 07 Apr 2017 16:06:00 transport.py[line:1430] DEBUG Adding ssh-rsa host key for 10.237.81.17: 62133ddef350b84d024c8f40dd0395a1
+Fri, 07 Apr 2017 16:06:00 transport.py[line:1430] DEBUG userauth is OK
+Fri, 07 Apr 2017 16:06:00 transport.py[line:1430] INFO Authentication (password) successful!
+Fri, 07 Apr 2017 16:06:01 channel.py[line:1072] DEBUG [chan 0] Max packet in: 32768 bytes
+Fri, 07 Apr 2017 16:06:01 channel.py[line:1072] DEBUG [chan 0] Max packet out: 32768 bytes
+Fri, 07 Apr 2017 16:06:01 transport.py[line:1430] DEBUG Secsh channel 0 opened.
+Fri, 07 Apr 2017 16:06:01 channel.py[line:1072] DEBUG [chan 0] Sesch channel 0 request ok
+Fri, 07 Apr 2017 16:06:07 channel.py[line:1072] DEBUG [chan 0] EOF received (0)
+Fri, 07 Apr 2017 16:06:07 deal_live_plat_util.py[line:58] DEBUG tomcat_ledo_live_http was force killed
+delete /export/tomcat/tomcat_ledo_live_http/webapps/ledo-live files complete.
+cp ledo-live.war files complete.
+Tomcat started.
+tomcat_ledo_live_http was started
+delete ./ledo-live.war complete.
+
+Fri, 07 Apr 2017 16:06:07 deal_live_plat_util.py[line:58] DEBUG 
+Fri, 07 Apr 2017 16:08:48 deal_live_plat_util.py[line:63] DEBUG deploy war file success .
+Fri, 07 Apr 2017 16:32:21 deal_live_plat_util.py[line:34] DEBUG ========deal_live============
+Fri, 07 Apr 2017 16:32:21 deal_live_plat_util.py[line:102] DEBUG begin to download live_war...
+Fri, 07 Apr 2017 16:32:21 deal_live_plat_util.py[line:107] DEBUG relative_url-->/com/ledo/live/sdk/ledo-live-web/0.0.1-SNAPSHOT/ledo-live-web-0.0.1-20170407.082448-5.war
+Fri, 07 Apr 2017 16:32:21 deal_live_plat_util.py[line:109] DEBUG download_live_url-->http://10.237.181.73:8081/nexus/service/local/repositories/snapshots/content/com/ledo/live/sdk/ledo-live-web/0.0.1-SNAPSHOT/ledo-live-web-0.0.1-20170407.082448-5.war
+Fri, 07 Apr 2017 16:32:22 deal_live_plat_util.py[line:114] DEBUG download success...
+Fri, 07 Apr 2017 16:32:22 deal_live_plat_util.py[line:47] DEBUG rename success. 
+Fri, 07 Apr 2017 16:32:22 transport.py[line:1430] DEBUG starting thread (client mode): 0x53cde10L
+Fri, 07 Apr 2017 16:32:22 transport.py[line:1430] INFO Connected (version 2.0, client OpenSSH_5.3)
+Fri, 07 Apr 2017 16:32:22 transport.py[line:1430] DEBUG kex algos:[u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ssh-dss'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+Fri, 07 Apr 2017 16:32:22 transport.py[line:1430] DEBUG Ciphers agreed: local=aes128-ctr, remote=aes128-ctr
+Fri, 07 Apr 2017 16:32:22 transport.py[line:1430] DEBUG using kex diffie-hellman-group14-sha1; server key type ssh-rsa; cipher: local aes128-ctr, remote aes128-ctr; mac: local hmac-sha1, remote hmac-sha1; compression: local none, remote none
+Fri, 07 Apr 2017 16:32:22 transport.py[line:1430] DEBUG Switch to new keys ...
+Fri, 07 Apr 2017 16:32:22 transport.py[line:1430] DEBUG Attempting password auth...
+Fri, 07 Apr 2017 16:32:22 transport.py[line:1430] DEBUG userauth is OK
+Fri, 07 Apr 2017 16:32:22 transport.py[line:1430] INFO Authentication (password) successful!
+Fri, 07 Apr 2017 16:32:22 channel.py[line:1072] DEBUG [chan 0] Max packet in: 32768 bytes
+Fri, 07 Apr 2017 16:32:22 channel.py[line:1072] DEBUG [chan 0] Max packet out: 32768 bytes
+Fri, 07 Apr 2017 16:32:22 transport.py[line:1430] DEBUG Secsh channel 0 opened.
+Fri, 07 Apr 2017 16:32:22 channel.py[line:1072] DEBUG [chan 0] Sesch channel 0 request ok
+Fri, 07 Apr 2017 16:32:22 sftp.py[line:129] INFO [chan 0] Opened sftp connection (server version 3)
+Fri, 07 Apr 2017 16:32:22 sftp.py[line:129] DEBUG [chan 0] open('/export/sdk/hx/ledo_live/ledo-live.war', 'wb')
+Fri, 07 Apr 2017 16:32:22 sftp.py[line:129] DEBUG [chan 0] open('/export/sdk/hx/ledo_live/ledo-live.war', 'wb') -> 00000000
+Fri, 07 Apr 2017 16:32:24 sftp.py[line:129] DEBUG [chan 0] close(00000000)
+Fri, 07 Apr 2017 16:32:24 sftp.py[line:129] DEBUG [chan 0] stat('/export/sdk/hx/ledo_live/ledo-live.war')
+Fri, 07 Apr 2017 16:32:25 transport.py[line:1430] DEBUG EOF in transport thread
+Fri, 07 Apr 2017 16:32:25 deal_live_plat_util.py[line:51] DEBUG upload war file success .
+Fri, 07 Apr 2017 16:32:25 transport.py[line:1430] DEBUG starting thread (client mode): 0x399aeb0L
+Fri, 07 Apr 2017 16:32:25 transport.py[line:1430] INFO Connected (version 2.0, client OpenSSH_5.3)
+Fri, 07 Apr 2017 16:32:25 transport.py[line:1430] DEBUG kex algos:[u'diffie-hellman-group-exchange-sha256', u'diffie-hellman-group-exchange-sha1', u'diffie-hellman-group14-sha1', u'diffie-hellman-group1-sha1'] server key:[u'ssh-rsa', u'ssh-dss'] client encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] server encrypt:[u'aes128-ctr', u'aes192-ctr', u'aes256-ctr', u'arcfour256', u'arcfour128', u'aes128-cbc', u'3des-cbc', u'blowfish-cbc', u'cast128-cbc', u'aes192-cbc', u'aes256-cbc', u'arcfour', u'rijndael-cbc@lysator.liu.se'] client mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] server mac:[u'hmac-md5', u'hmac-sha1', u'umac-64@openssh.com', u'hmac-sha2-256', u'hmac-sha2-512', u'hmac-ripemd160', u'hmac-ripemd160@openssh.com', u'hmac-sha1-96', u'hmac-md5-96'] client compress:[u'none', u'zlib@openssh.com'] server compress:[u'none', u'zlib@openssh.com'] client lang:[u''] server lang:[u''] kex follows?False
+Fri, 07 Apr 2017 16:32:25 transport.py[line:1430] DEBUG Ciphers agreed: local=aes128-ctr, remote=aes128-ctr
+Fri, 07 Apr 2017 16:32:25 transport.py[line:1430] DEBUG using kex diffie-hellman-group14-sha1; server key type ssh-rsa; cipher: local aes128-ctr, remote aes128-ctr; mac: local hmac-sha1, remote hmac-sha1; compression: local none, remote none
+Fri, 07 Apr 2017 16:32:25 transport.py[line:1430] DEBUG Switch to new keys ...
+Fri, 07 Apr 2017 16:32:25 transport.py[line:1430] DEBUG Adding ssh-rsa host key for 10.237.81.17: 62133ddef350b84d024c8f40dd0395a1
+Fri, 07 Apr 2017 16:32:25 transport.py[line:1430] DEBUG userauth is OK
+Fri, 07 Apr 2017 16:32:25 transport.py[line:1430] INFO Authentication (password) successful!
+Fri, 07 Apr 2017 16:32:25 channel.py[line:1072] DEBUG [chan 0] Max packet in: 32768 bytes
+Fri, 07 Apr 2017 16:32:25 channel.py[line:1072] DEBUG [chan 0] Max packet out: 32768 bytes
+Fri, 07 Apr 2017 16:32:25 transport.py[line:1430] DEBUG Secsh channel 0 opened.
+Fri, 07 Apr 2017 16:32:25 channel.py[line:1072] DEBUG [chan 0] Sesch channel 0 request ok
+Fri, 07 Apr 2017 16:32:32 channel.py[line:1072] DEBUG [chan 0] EOF received (0)
+Fri, 07 Apr 2017 16:32:32 deal_live_plat_util.py[line:58] DEBUG tomcat_ledo_live_http was force killed
+delete /export/tomcat/tomcat_ledo_live_http/webapps/ledo-live files complete.
+cp ledo-live.war files complete.
+Tomcat started.
+tomcat_ledo_live_http was started
+delete ./ledo-live.war complete.
+
+Fri, 07 Apr 2017 16:32:32 deal_live_plat_util.py[line:58] DEBUG 
+Fri, 07 Apr 2017 16:32:32 deal_live_plat_util.py[line:63] DEBUG deploy war file success .
+Fri, 07 Apr 2017 16:39:52 deal_live_plat_util.py[line:68] DEBUG ========deal_netty============
+Fri, 07 Apr 2017 16:39:54 deal_live_plat_util.py[line:117] DEBUG begin to download netty_war...
+Fri, 07 Apr 2017 16:39:54 deal_live_plat_util.py[line:121] DEBUG relative_url-->/com/ledo/tv/sdk/ledo-tv-web/0.0.1-SNAPSHOT/ledo-tv-web-0.0.1-20170407.083115-2.war
+Fri, 07 Apr 2017 16:39:54 deal_live_plat_util.py[line:123] DEBUG download_netty_url-->http://10.237.181.73:8081/nexus/service/local/repositories/snapshots/content/com/ledo/tv/sdk/ledo-tv-web/0.0.1-SNAPSHOT/ledo-tv-web-0.0.1-20170407.083115-2.war
+Fri, 07 Apr 2017 16:39:55 deal_live_plat_util.py[line:128] DEBUG download success...
+Fri, 07 Apr 2017 16:41:35 deal_live_plat_util.py[line:81] DEBUG rename success. 
+Fri, 07 Apr 2017 16:41:46 deal_live_plat_util.py[line:85] DEBUG upload war file success .
+Fri, 07 Apr 2017 16:42:12 deal_live_plat_util.py[line:92] DEBUG tomcat_netty_server was force killed
+delete /export/tomcat/tomcat_netty_server/webapps/chat files complete.
+cp chat.war files complete.
+Tomcat started.
+tomcat_ledo_netty_server was started
+delete ./chat.war complete.
+
+Fri, 07 Apr 2017 16:42:16 deal_live_plat_util.py[line:92] DEBUG Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=256M; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512M; support was removed in 8.0
+
+Fri, 07 Apr 2017 16:43:14 deal_live_plat_util.py[line:95] DEBUG deploy war file error .
