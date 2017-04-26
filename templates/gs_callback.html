@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>直播平台-配置管理</title>
+    <!-- Bootstrap -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/jquery.mobile-1.4.5.css">
+
+    <style>
+        .textarea_font {
+            font-size: 20px;
+            font-family: "Helvetica Neue", Helvetica, STheiti, "微软雅黑", "宋体", Arial, Tahoma, sans-serif, serif;
+            color: #3e8f3e;
+        }
+
+        .bak_div {
+            width: 100%;
+            height: 100%;
+            color: #777777;
+            opacity: 0.8;
+
+        }
+
+        .demo {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            border: 2px solid #ccc;
+            background: #84c59c;
+            padding: 10px;
+            position: relative;
+            left: 95%;
+            background-image: url('http://www.manongjc.com/Public/images/logo.gif');
+            opacity: 0.4;
+            filter: alpha(opacity=40);
+        }
+
+        a:hover {
+            color: red;
+            text-decoration: underline;
+        }
+
+    </style>
+    <script src="/static/jquery.min.js"></script>
+    <script src="/static/js/jquery.mobile-1.4.5.js"></script>
+    <script>
+        function showLoader() {
+            $.mobile.loading("show", {
+                text: '加载中...',
+                textVisible: true,
+                theme: 'b',
+                textonly: false,
+                html: ''
+            });
+        }
+
+        function hideLoader() {
+            $.mobile.loading("hide");
+        }
+
+
+        $(document).ready(function () {
+
+            $("#deploy_type").prev().text($("#deploy_type option:selected").text());
+
+            $("#result").html('no result...');
+
+            $("#deploy_btn").click(function () {
+                var deploy_type = $("#deploy_type").val();
+                var role_id = $("#role_id").val();
+                var item_id = $("#item_id").val();
+                var item_name = $("#item_name").val();
+                var appid = $("#appid").val();
+                if(deploy_type == ''){
+                    alert("请选择操作类型...");
+                    return false;
+                }
+                if($.trim(role_id) == ''||$.trim(item_id) == ''||$.trim(item_name) == ''||$.trim(appid) == ''){
+                    alert("入参错误.");
+                    return false;
+                }
+                $(this).attr('disabled', "true");
+                showLoader();
+                $.ajax({
+                    url: '/call_live/',
+                    data: {
+                        'deploy_type': deploy_type,
+                        'role_id': role_id,
+                        'item_id': item_id,
+                        'item_name': item_name,
+                        'appid': appid
+                    },
+                    dataType: 'json',
+                    type: 'POST',
+                    success: function (data) {
+                        $("#deploy_btn").removeAttr("disabled");
+                        console.log(data.data);
+                        var re1 = new RegExp('↵+', 'g');
+                        var re2 = new RegExp('\n+', 'g');
+                        $("#result").html(data.data
+                                .replace(re1, '<p>')
+                                .replace(re2, '<p>'));
+                        hideLoader();
+                        if (data.ret_code == '0') {
+                            alert($("#deploy_type option:selected").text() + " 部署成功")
+                        }
+                    },
+                    error: function (a, b, c) {
+                        $("#deploy_btn").removeAttr("disabled");
+                        alert(a + b + c);
+                        hideLoader();
+                    }
+                });
+            });
+
+            $("#reflush_btn").click(function () {
+                window.location.href = '/show_call_live/';
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div data-role="page" id="testpage" data-url="testpage" tabindex="0"
+     class="ui-page ui-page-footer-fixed ui-page-active ui-page-theme-d" style="padding-bottom: 35px;">
+    <div style="background-color: #c4e3f3">
+
+        <div data-role="header" role="banner" class="ui-header ui-bar-inherit">
+            <h1 class="ui-title" role="heading" aria-level="1">平台管理</h1>
+        </div>
+
+        <form method="post" style="width: 30%;" class="center-block">
+            <div data-role="fieldcontain">
+                <label class="select" for="deploy_type">操作类型</label>
+                <select id="deploy_type" name='deploy_type'>
+                    <option value="1">发送道具GS回调</option>
+                </select>
+            </div>
+
+            <div class="ui-body text-center">
+                <div data-role="fieldcontain">
+                    <label>角色id</label>
+                    <input type="text" id="role_id" placeholder="角色id..." data-clear-btn="true">
+                </div>
+                <div data-role="fieldcontain">
+                    <label>商品id</label>
+                    <input type="text" id="item_id" placeholder="商品id..." data-clear-btn="true">
+                </div>
+                <div data-role="fieldcontain">
+                    <label>商品名称</label>
+                    <input type="text" id="item_name" placeholder="商品名称..." data-clear-btn="true">
+                </div>
+                <div data-role="fieldcontain">
+                    <label>appid</label>
+                    <input type="text" id="appid" placeholder="appid..." data-clear-btn="true">
+                </div>
+                <fieldset class="ui-grid-a">
+                    <input type="button" value="发起调用" id='deploy_btn' data-inline="true" data-icon="search">
+                    <input type="button" value="重置" id='reflush_btn' data-inline="true" data-icon="refresh">
+                </fieldset>
+
+            </div>
+        </form>
+    </div>
+    <div style="background-color: #0088bb;height: 20px;"></div>
+    <div>
+        <div class="center-block textarea_font" id="result"
+             style="witdh:100%;height:800px;overflow:scroll;word-wrap:break-word;background-color: #c4e3f3" readonly>
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+
+</html>

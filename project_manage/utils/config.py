@@ -16,3 +16,16 @@ nexus_live_url = 'http://127.0.0.1:8080/nexus/service/local/artifact/maven/resol
 
 #netty war包maven私服地址
 nexus_netty_url = 'http://127.0.0.1:8080/nexus/service/local/artifact/maven/resolve?_dc=1491391157005&r=snapshots&g=com.xxx&a=tv-web&v=0.0.1-SNAPSHOT&c=&e=war&isLocal=true'
+
+#sdk ip白名单
+sdk_ip = ['127.0.0.1']
+#bi ip白名单
+bi_ip = ['127.0.0.1']
+#admin ip白名单
+manager_ip = ['127.0.0.1']
+
+#语音直播调用url
+grant_item_callback = 'https://xxx.com/xxx/tv/xxx'
+
+#语音直播key
+sign_key = '123'

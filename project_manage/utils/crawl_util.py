@@ -25,6 +25,20 @@ class CrawlUtil(object):
         # print res.text
         return res.text
 
+    def crawl_https_text_data(self,crawl_url,post_data):
+        '''
+            https请求方法
+            :param crawl_url:
+            :param post_data:
+            :return:
+        '''
+        header_info = {
+            'Content-Type':'application/json'
+        }
+        res = self.s.post(crawl_url,json=post_data,headers=header_info,verify=False)
+        # print res.text
+        return res.text
+
     def get_data(self,crawl_url,request_data):
         res = self.s.get(crawl_url,params=request_data)
         # print res.content

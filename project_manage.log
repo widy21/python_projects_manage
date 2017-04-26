@@ -114,3 +114,4 @@ Fri, 07 Apr 2017 16:42:16 deal_live_plat_util.py[line:92] DEBUG Java HotSpot(TM)
 Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=512M; support was removed in 8.0
 
 Fri, 07 Apr 2017 16:43:14 deal_live_plat_util.py[line:95] DEBUG deploy war file error .
+Wed, 26 Apr 2017 17:41:45 view.py[line:23] DEBUG ip --> 127.0.0.1
