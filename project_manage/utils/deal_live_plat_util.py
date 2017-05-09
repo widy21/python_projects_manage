@@ -36,7 +36,7 @@ class PlatUtil(object):
     def deal_live(self):
         self.logger.debug('========deal_live============')
         self.download_live_war()
-        remote_dir = '/export/sdk/hx/ledo_live'
+        remote_dir = '/export/sdk/hx/xx_live'
 
         # 上传war包
         upload_local_dir = sys.path[0] + '/upload_files'
@@ -45,16 +45,16 @@ class PlatUtil(object):
         self.logger.debug('srcfile --> ', srcfile)
 
         # 修改war包名称
-        tofile = os.path.join(upload_local_dir, "ledo-live.war")
+        tofile = os.path.join(upload_local_dir, "xx-live.war")
         os.rename(srcfile, tofile)
         self.logger.debug('rename success. ')
 
         self.serverUtil.upload_single_file(config.host_ip, config.cn_port, config.cn_username, config.cn_password,
-                                           tofile, remote_dir, "ledo-live.war")
+                                           tofile, remote_dir, "xx-live.war")
         self.logger.debug('upload war file success .')
 
         # 执行部署脚本
-        commond = 'sh /export/sdk/hx/ledo_live/deploy_live_tomcat.sh'
+        commond = 'sh /export/sdk/hx/xx_live/deploy_live_tomcat.sh'
         result = self.serverUtil.exec_command_pwd(config.host_ip, config.cn_port, config.cn_username,
                                                   config.cn_password, commond)
         for i in result:
@@ -70,7 +70,7 @@ class PlatUtil(object):
     def deal_netty(self):
         self.logger.debug('========deal_netty============')
         self.download_netty_war()
-        remote_dir = '/export/sdk/hx/ledo_netty'
+        remote_dir = '/export/sdk/hx/xx_netty'
 
         # 上传war包
         upload_local_dir = sys.path[0] + '/upload_files'
@@ -88,7 +88,7 @@ class PlatUtil(object):
         self.logger.debug('upload war file success .')
 
         # 执行部署脚本
-        commond = 'sh /export/sdk/hx/ledo_netty/deploy_netty_tomcat.sh'
+        commond = 'sh /export/sdk/hx/xx_netty/deploy_netty_tomcat.sh'
         result = self.serverUtil.exec_command_pwd(config.host_ip, config.cn_port, config.cn_username,
                                                   config.cn_password, commond)
         for i in result:
@@ -104,7 +104,7 @@ class PlatUtil(object):
     def deal_bi_motan(self):
         self.logger.debug('========deal_bi_motan============')
         self.download_motan_war()
-        remote_dir = '/export/sdk/hx/ledo_motan'
+        remote_dir = '/export/sdk/hx/xx_motan'
 
         # 上传war包
         upload_local_dir = sys.path[0] + '/upload_files'
@@ -122,7 +122,7 @@ class PlatUtil(object):
         self.logger.debug('upload war file success .')
 
         # 执行部署脚本
-        commond = 'sh /export/sdk/hx/ledo_motan/deploy_motan_tomcat.sh'
+        commond = 'sh /export/sdk/hx/xx_motan/deploy_motan_tomcat.sh'
         result = self.serverUtil.exec_command_pwd(config.host_ip, config.cn_port, config.cn_username,
                                                   config.cn_password, commond)
         for i in result:
@@ -138,7 +138,7 @@ class PlatUtil(object):
     def deal_bi_admin(self):
         self.logger.debug('========deal_bi_admin============')
         self.download_admin_war()
-        remote_dir = '/export/sdk/hx/ledo_admin'
+        remote_dir = '/export/sdk/hx/xx_admin'
 
         # 上传war包
         upload_local_dir = sys.path[0] + '/upload_files'
@@ -156,7 +156,7 @@ class PlatUtil(object):
         self.logger.debug('upload war file success .')
 
         # 执行部署脚本
-        commond = 'sh /export/sdk/hx/ledo_admin/deploy_admin_tomcat.sh'
+        commond = 'sh /export/sdk/hx/xx_admin/deploy_admin_tomcat.sh'
         result = self.serverUtil.exec_command_pwd(config.admin_ip, config.cn_port, config.cn_username,
                                                   config.cn_password, commond)
         for i in result:
@@ -179,7 +179,7 @@ class PlatUtil(object):
         download_url = 'http://10.237.181.73:8081/nexus/service/local/repositories/snapshots/content%s' % relative_url
         self.logger.debug('download_live_url-->%s' % download_url)
         down_local_dir = sys.path[0] + '/upload_files'
-        tofile = os.path.join(down_local_dir, "ledo-live.war")
+        tofile = os.path.join(down_local_dir, "xx-live.war")
         # 下载文件
         self.crawlUtil.download_file(download_url, tofile)
         self.logger.debug('download success...')
